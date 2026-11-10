@@ -1,0 +1,15 @@
+builds:
+  - binary: ishikaridc-workshop-app
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+archives:
+  - format: zip
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+release:
+  github:
+    owner: kazeburo
+    name: ishikaridc-workshop-app
